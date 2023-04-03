@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer;
+
+        // insert Code
+
+        // 내가 짠 코드
+
+        // if (a > b) {
+        //   if (b > c) {
+        //     answer = c;
+        //   } else {
+        //     // b < c
+        //     answer = b;
+        //   }
+        // } else {
+        //   // a < b
+        //   if (a < c) {
+        //     asnwer = a;
+        //   } else {
+        //     // a > c
+        //     answer = c;
+        //   }
+        // }
+
+        // 쌤이 쓴 코드
+        if (a < b) answer = a;
+        else answer = b;
+        if (c < answer) answer = c;
+
+        return answer;
+      }
+      console.log(solution(6, 5, 11));
+    </script>
+  </body>
+</html>
