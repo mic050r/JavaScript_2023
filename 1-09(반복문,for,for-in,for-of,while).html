@@ -38,9 +38,24 @@
       // }
 
       // 자바 스크립트만의 특징
-      var numbers = [43, 23, 5, 7, 99, 12, 19];
-      for (var i of numbers) {
-        console.log(i);
+      // var numbers = [43, 23, 5, 7, 99, 12, 19];
+      // for (var i of numbers) {
+      //   console.log(i);
+      // }
+
+      var person = {
+        firstName: "길동",
+        lastName: "홍",
+        age: 37,
+      };
+
+      console.log(person.firstName);
+      console.log(person.lastName);
+      console.log(person.age);
+
+      for (var key in person) {
+        // console.log(key);
+        console.log(person[key]);
       }
     </script>
   </body>
