@@ -21,12 +21,19 @@
       // console.log(str.search("locate")); // search는 앞에 있는것만 찾아줌
 
       // slice
+      // var str = "Apple, Banana, kiwi";
+      // // (인덱스, 인덱스-1) (인덱스, 글자수)
+      // console.log(str.slice(7, 13)); // 출력값 : Banana
+      // console.log(str.slice(7));     // 출력값 : Banana, kiwi
+      // console.log(str.slice(-12, -6)); // 출력값 : Banana
+      // console.log(str.slice(-2));
+
+      // substring
       var str = "Apple, Banana, kiwi";
-      // (인덱스, 인덱스-1) (인덱스, 글자수)
-      console.log(str.slice(7, 13)); // 출력값 : banana
-      console.log(str.slice(7));
-      console.log(str.slice(-12, -6));
-      console.log(str.slice(-2));
+      console.log(str.substring(7, 13)); // 출력값 : Banana
+
+      // substr
+      console.log(str.substr(7, 6)); // 출력값 : Banana
     </script>
   </body>
 </html>
