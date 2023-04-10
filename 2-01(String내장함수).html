@@ -17,8 +17,16 @@
       // console.log(str.lastIndexOf("locate")); // 뒤에 있는 값을 찾아줌
 
       // search
-      var str = "Please locate where 'locate'";
-      console.log(str.search("locate")); // search는 앞에 있는것만 찾아줌
+      // var str = "Please locate where 'locate'";
+      // console.log(str.search("locate")); // search는 앞에 있는것만 찾아줌
+
+      // slice
+      var str = "Apple, Banana, kiwi";
+      // (인덱스, 인덱스-1) (인덱스, 글자수)
+      console.log(str.slice(7, 13)); // 출력값 : banana
+      console.log(str.slice(7));
+      console.log(str.slice(-12, -6));
+      console.log(str.slice(-2));
     </script>
   </body>
 </html>
