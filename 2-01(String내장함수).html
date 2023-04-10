@@ -44,9 +44,13 @@
       // console.log(jumin2.substring(0, jumin2.indexOf("-")));
 
       // replace
-      var str3 = "Please visit here here here";
-      var str4 = str3.replace("here", "there");
-      console.log(str4);
+      // var str3 = "Please visit here here here";
+      // var str4 = str3.replace("here", "there");
+      // console.log(str4);
+
+      var str5 = "Please visit here here here";
+      var str6 = str5.replace(/here/g, "there"); // g : gloval (=전체)을 의미
+      console.log(str6);
     </script>
   </body>
 </html>
