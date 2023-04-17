@@ -3,12 +3,18 @@
     <title></title>
   </head>
   <body>
+    <div id="div1"></div>
     <script>
-      var fruits1 = ["Banana", "Orange", "Apple"];
-      console.log(fruits1.toString()); // Banana,Orange,Apple
+      // var fruits1 = ["Banana", "Orange", "Apple"];
+      // console.log(fruits1.toString()); // Banana,Orange,Apple
 
       // join(); 중요
-      console.log(fruits1.join(" * ")); // Banana * Orange * Apple
+      // console.log(fruits1.join(" * ")); // Banana * Orange * Apple
+
+      var txt1 = "Banana<br>";
+      txt1 += "Orange<br>";
+      txt1 += "Apple<br>";
+      document.getElementById("div1").innerHTML = txt1;
     </script>
   </body>
 </html>
