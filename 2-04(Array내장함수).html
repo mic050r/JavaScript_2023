@@ -99,10 +99,16 @@
         { name: "강태현", point: 94 },
       ];
       // console.log(person.sort());
+      // person.sort(function (a, b) {
+      //   if (a.point > b.point) return 1;
+      //   else if (a.point < b.point) return -1;
+      //   else 0;
+      // });
+      // console.log(person.sort());
+
+      // 삼항연산자
       person.sort(function (a, b) {
-        if (a.point > b.point) return 1;
-        else if (a.point < b.point) return -1;
-        else 0;
+        return a.point > b.point ? 1 : a.point < b.point ? -1 : 0;
       });
       console.log(person.sort());
     </script>
