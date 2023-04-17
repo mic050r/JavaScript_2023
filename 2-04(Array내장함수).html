@@ -24,12 +24,18 @@
       // document.getElementById("div1").innerHTML = arr1.join("<br>");
 
       // pop() : 배열의 가장 마지막 항목을 제거하여 리턴
-      var fruits2 = ["Banana", "Orange", "Apple"];
-      var arr2 = fruits2.pop();
-      console.log(arr2); // 출력값 : Apple
-      console.log(fruits2); // 출력값 : ['Banana', 'Orange']
-      fruits2.push("Kiwi");
-      console.log(fruits2); // 출력값 :  ['Banana', 'Orange', 'Kiwi']
+      // var fruits2 = ["Banana", "Orange", "Apple"];
+      // var arr2 = fruits2.pop();
+      // console.log(arr2); // 출력값 : Apple
+      // console.log(fruits2); // 출력값 : ['Banana', 'Orange']
+      // fruits2.push("Kiwi");
+      // console.log(fruits2); // 출력값 :  ['Banana', 'Orange', 'Kiwi']
+
+      // shift() 배열의 첫번째 항목을 제거함
+      var fruits3 = ["Banana", "Orange", "Apple"];
+      var str = fruits3.shift();
+      console.log(str); // banana
+      console.log(fruits3); // orange, apple
     </script>
   </body>
 </html>
