@@ -88,8 +88,23 @@
       //   })
       // );
 
-      console.log(points);
-      console.log(points.reverse());
+      // console.log(points);
+      // console.log(points.reverse());
+
+      // object 정렬
+      var person = [
+        { name: "최연준", point: 100 },
+        { name: "최수빈", point: 88 },
+        { name: "최범규", point: 85 },
+        { name: "강태현", point: 94 },
+      ];
+      // console.log(person.sort());
+      person.sort(function (a, b) {
+        if (a.point > b.point) return 1;
+        else if (a.point < b.point) return -1;
+        else 0;
+      });
+      console.log(person.sort());
     </script>
   </body>
 </html>
