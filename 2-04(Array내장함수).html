@@ -32,10 +32,21 @@
       // console.log(fruits2); // 출력값 :  ['Banana', 'Orange', 'Kiwi']
 
       // shift() 배열의 첫번째 항목을 제거함
-      var fruits3 = ["Banana", "Orange", "Apple"];
-      var str = fruits3.shift();
-      console.log(str); // banana
-      console.log(fruits3); // orange, apple
+      // var fruits3 = ["Banana", "Orange", "Apple"];
+      // var str = fruits3.shift();
+      // console.log(str); // banana
+      // console.log(fruits3); // orange, apple
+
+      // unshift() 배열의 첫번째에 새로운 항목을 추가함
+      var fruits4 = ["Banana", "Orange", "Apple"];
+      fruits4.unshift("Lemon");
+      console.log(fruits4); //['Lemon', 'Banana', 'Orange', 'Apple']
+
+      fruits4[0] = "Grape";
+      console.log(fruits4);
+      console.log(fruits4.length);
+      fruits4[fruits4.length - 1] = "Peach";
+      console.log(fruits4);
     </script>
   </body>
 </html>
