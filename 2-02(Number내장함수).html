@@ -23,12 +23,18 @@
       // var x5 = Number(ture);
       // console.log(x5); // 출력값 : 1
 
-      console.log(Number("              10                ")); // 출력값 : 10, 공백 제거후 숫자로 변환
-      console.log(Number("              10")); // 출력값 : 10, 공백 제거후 숫자로 변환
-      console.log(Number("10.33"));
-      console.log(Number("10,33")); // NaN(Not a Number)
-      console.log(Number("choi")); // NaN(Not a Number)
-      console.log(Number("10 33")); // NaN(Not a Number)
+      // console.log(Number("              10                ")); // 출력값 : 10, 공백 제거후 숫자로 변환
+      // console.log(Number("              10")); // 출력값 : 10, 공백 제거후 숫자로 변환
+      // console.log(Number("10.33"));
+      // console.log(Number("10,33")); // NaN(Not a Number)
+      // console.log(Number("choi")); // NaN(Not a Number)
+      // console.log(Number("10 33")); // NaN(Not a Number)
+
+      // parseInt()
+      console.log(Number("3")); // 출력값 : 3
+      console.log(parseInt("3.9")); // 출력값 : 3 소수점은 무조건 버림
+      console.log(parseInt("10 20 30")); // 출력값 : 10 공백 맨 앞자리에 있는 값만 출력
+      console.log(parseInt("10 years old")); // 출력값 : 10
     </script>
   </body>
 </html>
