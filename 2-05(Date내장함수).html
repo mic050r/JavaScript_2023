@@ -40,8 +40,15 @@
       // 글제목, 작성자, 작성일 :
       // 2023.1.21 05:24 (영국)
 
-      var d4 = new Date();
-      console.log("timezome ", d4.getTimezoneOffset()); // 출력값(분단위) : -540 --> 9시간
+      // var d4 = new Date();
+      // console.log("timezome ", d4.getTimezoneOffset()); // 출력값(분단위) : -540 --> 9시간
+
+      // 특정 날짜와 시간을 직접 지정할 수도 있음.
+      var d5 = new Date();
+      d5.setFullYear(2007);
+      d5.setMonth(7);
+      d5.setDate(28);
+      console.log(d5);
     </script>
   </body>
 </html>
