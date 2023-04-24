@@ -134,7 +134,7 @@
 
       // filter()를 for문으로 구현
       // var jeju = [];
-      // for (let i = 0; i < person.length; i++) {
+      // for (let i = 0; i <script person.length; i++) {
       //   if (person[i].city === "제주") jeju.push(person[i]);
       // }
       // console.log(jeju);
@@ -149,12 +149,26 @@
       // reduce
       // a : accumulator(누산기)
       // c : currentValue
-      var arr4 = [1, 2, 3, 4, 5];
-      var total = arr4.reduce(function (a, c) {
-        return a + c;
+      // var arr4 = [1, 2, 3, 4, 5];
+      // var total = arr4.reduce(function (a, c) {
+      //   return a + c;
+      // });
+
+      // console.log(total);
+
+      // map - filter()와 다른 형태로 새로운 배열을 생성
+      var userList = [
+        { firstName: "재석", lastName: "유", email: "yu@gmail.com" },
+        { firstName: "종국", lastName: "김", email: "kim@gmail.com" },
+        { firstName: "세찬", lastName: "양", email: "yang@gmail.com" },
+        { firstName: "석진", lastName: "지", email: "ji@gmail.com" },
+      ];
+
+      var userList2 = userList.map(function (user) {
+        return { fullName: "런닝맨 멤버 " + user.lastName + user.firstName };
       });
 
-      console.log(total);
+      console.log(userList2);
     </script>
   </body>
 </html>
