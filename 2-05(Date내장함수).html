@@ -1,6 +1,7 @@
 <html>
   <head>
     <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   </head>
   <body>
     <script>
@@ -44,11 +45,17 @@
       // console.log("timezome ", d4.getTimezoneOffset()); // 출력값(분단위) : -540 --> 9시간
 
       // 특정 날짜와 시간을 직접 지정할 수도 있음.
-      var d5 = new Date();
-      d5.setFullYear(2007);
-      d5.setMonth(7);
-      d5.setDate(28);
-      console.log(d5);
+      // var d5 = new Date();
+      // d5.setFullYear(2007);
+      // d5.setMonth(7);
+      // d5.setDate(28);
+      // console.log(d5);
+
+      // 실무에서는 mometn.js 라이브러리를 활용
+      var d6 = new Date();
+      console.log(d6);
+      console.log(moment().format("YYYY-MM-DD"));
+      console.log(moment().format("MMM DD, YYY"));
     </script>
   </body>
 </html>
