@@ -106,11 +106,18 @@
       // });
       // console.log(person.sort());
 
-      // 삼항연산자
-      person.sort(function (a, b) {
-        return a.point > b.point ? 1 : a.point < b.point ? -1 : 0;
+      // 삼항연산자 : (조건) ? true : false;
+      // person.sort(function (a, b) {
+      //   return a.point > b.point ? 1 : a.point < b.point ? -1 : 0;
+      // });
+      // console.log(person.sort());
+
+      // filter() : 조건에 맞는 배열만 리턴
+      var pass = person.filter(function (per) {
+        return per.point > 90;
       });
-      console.log(person.sort());
+
+      console.log(pass);
     </script>
   </body>
 </html>
