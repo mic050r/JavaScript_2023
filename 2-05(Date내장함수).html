@@ -15,25 +15,33 @@
       // console.log(d2);
       // console.log(d2.getMonth());
 
-      var d3 = new Date();
-      console.log(d3);
+      // var d3 = new Date();
+      // console.log(d3);
 
-      var year = d3.getFullYear();
-      console.log("year : " + year);
+      // var year = d3.getFullYear();
+      // console.log("year : " + year);
 
-      var month = d3.getMonth();
-      console.log("month : " + (month + 1));
+      // var month = d3.getMonth();
+      // console.log("month : " + (month + 1));
 
-      var date = d3.getDate();
-      console.log("date : " + date);
+      // var date = d3.getDate();
+      // console.log("date : " + date);
 
-      var day = d3.getDay();
-      console.log("date : " + day); // 일요일 : 0, 월요일 : 1, 화요일 : 2, ...토요일 : 6
+      // var day = d3.getDay();
+      // console.log("date : " + day); // 일요일 : 0, 월요일 : 1, 화요일 : 2, ...토요일 : 6
 
-      var hour = d3.getHours();
-      var minute = d3.getMinutes();
-      var second = d3.getSeconds();
-      console.log(hour, minute, second);
+      // var hour = d3.getHours();
+      // var minute = d3.getMinutes();
+      // var second = d3.getSeconds();
+      // console.log(hour, minute, second);
+
+      // 글로벌 서비스일 경우에는 접속한 국가의 타임존을 고려
+      // 2023.4.24 14:25 (한국)
+      // 글제목, 작성자, 작성일 :
+      // 2023.1.21 05:24 (영국)
+
+      var d4 = new Date();
+      console.log("timezome ", d4.getTimezoneOffset()); // 출력값(분단위) : -540 --> 9시간
     </script>
   </body>
 </html>
