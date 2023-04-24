@@ -133,11 +133,19 @@
       // console.log(jeju);
 
       // filter()를 for문으로 구현
-      var jeju = [];
-      for (let i = 0; i < person.length; i++) {
-        if (person[i].city === "제주") jeju.push(person[i]);
+      // var jeju = [];
+      // for (let i = 0; i < person.length; i++) {
+      //   if (person[i].city === "제주") jeju.push(person[i]);
+      // }
+      // console.log(jeju);
+
+      var arr3 = [1, 2, 3, 4, 5];
+      var total = 0;
+      for (var i of arr3) {
+        total += i;
       }
-      console.log(jeju);
+      console.log(total);
+      // reduce
     </script>
   </body>
 </html>
