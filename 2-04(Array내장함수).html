@@ -92,12 +92,12 @@
       // console.log(points.reverse());
 
       // object 정렬
-      var person = [
-        { name: "최연준", point: 100 },
-        { name: "최수빈", point: 88 },
-        { name: "최범규", point: 85 },
-        { name: "강태현", point: 94 },
-      ];
+      // var person = [
+      //   { name: "최연준", point: 100 },
+      //   { name: "최수빈", point: 88 },
+      //   { name: "최범규", point: 85 },
+      //   { name: "강태현", point: 94 },
+      // ];
       // console.log(person.sort());
       // person.sort(function (a, b) {
       //   if (a.point > b.point) return 1;
@@ -113,11 +113,24 @@
       // console.log(person.sort());
 
       // filter() : 조건에 맞는 배열만 리턴
-      var pass = person.filter(function (per) {
-        return per.point > 90;
+      // var pass = person.filter(function (per) {
+      //   return per.point > 90;
+      // });
+
+      // console.log(pass);
+
+      var person = [
+        { name: "최연준", point: 100, city: "서울" },
+        { name: "최수빈", point: 88, city: "서울" },
+        { name: "최범규", point: 85, city: "대구" },
+        { name: "강태현", point: 94, city: "제주" },
+      ];
+
+      var jeju = person.filter(function (per) {
+        return per.city === "제주";
       });
 
-      console.log(pass);
+      console.log(jeju);
     </script>
   </body>
 </html>
