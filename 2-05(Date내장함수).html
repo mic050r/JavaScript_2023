@@ -56,6 +56,15 @@
       console.log(d6);
       console.log(moment().format("YYYY-MM-DD"));
       console.log(moment().format("MMM DD, YYY"));
+
+      // 오늘을 기준으로 일주일 전을 검색
+      console.log(moment().subtract(7, "days").format("MMM DD, YYYY"));
+
+      // 오늘을 기준으로 일주일 후를 검색
+      console.log(moment().add(7, "days").format("YYYY-MM-DD"));
+
+      // 오늘을 기준으로 4시간 후를 검색
+      console.log(moment().add(4, "hours").format("YYYY-MM-DD HH"));
     </script>
   </body>
 </html>
