@@ -126,10 +126,17 @@
         { name: "강태현", point: 94, city: "제주" },
       ];
 
-      var jeju = person.filter(function (per) {
-        return per.city === "제주";
-      });
+      // var jeju = person.filter(function (per) {
+      //   return per.city === "제주";
+      // });
 
+      // console.log(jeju);
+
+      // filter()를 for문으로 구현
+      var jeju = [];
+      for (let i = 0; i < person.length; i++) {
+        if (person[i].city === "제주") jeju.push(person[i]);
+      }
       console.log(jeju);
     </script>
   </body>
