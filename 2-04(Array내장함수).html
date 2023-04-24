@@ -139,13 +139,22 @@
       // }
       // console.log(jeju);
 
-      var arr3 = [1, 2, 3, 4, 5];
-      var total = 0;
-      for (var i of arr3) {
-        total += i;
-      }
-      console.log(total);
+      // var arr3 = [1, 2, 3, 4, 5];
+      // var total = 0;
+      // for (var i of arr3) {
+      //   total += i;
+      // }
+      // console.log(total);
+
       // reduce
+      // a : accumulator(누산기)
+      // c : currentValue
+      var arr4 = [1, 2, 3, 4, 5];
+      var total = arr4.reduce(function (a, c) {
+        return a + c;
+      });
+
+      console.log(total);
     </script>
   </body>
 </html>
