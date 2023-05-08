@@ -18,11 +18,20 @@
       // console.log(userList);
       // console.table(userList);
 
-      console.time();
-      for (let x = 1; x <= 100000; x++) {
-        console.log(x);
+      // console.time();
+      // for (let x = 1; x <= 100000; x++) {
+      //   console.log(x);
+      // }
+      // console.timeEnd();
+
+      // 성능 파악할 때 쓰임
+      function test() {
+        console.time();
+        // code
+        console.timeEnd();
       }
-      console.timeEnd();
+
+      // chapter 02 여기까지
     </script>
   </body>
 </html>
