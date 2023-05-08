@@ -31,10 +31,17 @@
       // window.print();
 
       // setTimeout
-      setTimeout(function () {
-        alert("김예은 바보");
-        console.log("3초후에 프로그램이 실행됩니다.");
-      }, 3000);
+      // setTimeout(function () {
+      //   alert("김예은 바보");
+      //   console.log("3초후에 프로그램이 실행됩니다.");
+      // }, 3000);
+
+      // setInterval
+      var i = 0;
+      setInterval(function () {
+        console.log("1초마다 프로그램 호출 : " + i);
+        i++;
+      }, 1000);
     </script>
   </body>
 </html>
