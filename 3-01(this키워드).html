@@ -3,7 +3,14 @@
     <title></title>
   </head>
   <body>
+    <input type="Button" value="로그인" />
+    <button>클릭</button>
+    <button onclick="this.style.backgroundColor='red'">클릭1</button>
+    <button onclick="callFunc()">클릭2</button>
     <script>
+      function callFunc() {
+        alert("고양이");
+      }
       // var person = {
       //   firstName: "길동",
       //   lastName: "홍",
@@ -13,11 +20,11 @@
       // };
       // console.log(person.fullName());
 
-      function myFunction() {
-        console.log(this);
-      }
+      // function myFunction() {
+      //   console.log(this);
+      // }
 
-      myFunction();
+      // myFunction();
     </script>
   </body>
 </html>
