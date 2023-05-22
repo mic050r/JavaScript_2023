@@ -5,7 +5,10 @@
   <body>
     <script>
       function solution(arr) {
-        let answer = 100;
+        // 방법 1: for문을 이용
+        let answer,
+          min = Number.MAX_SAFE_INTEGER; // min에 js에서 제공하는 최댓값 넣어주기
+        // min = arr[0];
         for (let i = 0; i < arr.length; i++) {
           if (arr[i] < answer) answer = arr[i];
         }
