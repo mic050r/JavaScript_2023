@@ -6,10 +6,18 @@
     <input type="Button" value="로그인" />
     <button>클릭</button>
     <button onclick="this.style.backgroundColor='red'">클릭1</button>
-    <button onclick="callFunc()">클릭2</button>
+    <button onclick="callFunc(this)">클릭2</button>
+    <select onchange="changeSelect()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
     <script>
-      function callFunc() {
-        alert("고양이");
+      function changeSelect() {
+        alert("무야호!!~~");
+      }
+      function callFunc(obj1) {
+        console.log(obj1);
       }
       // var person = {
       //   firstName: "길동",
