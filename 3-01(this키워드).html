@@ -7,14 +7,14 @@
     <button>클릭</button>
     <button onclick="this.style.backgroundColor='red'">클릭1</button>
     <button onclick="callFunc(this)">클릭2</button>
-    <select onchange="changeSelect()">
+    <select onchange="changeSelect(this)">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
     </select>
     <script>
-      function changeSelect() {
-        alert("무야호!!~~");
+      function changeSelect(obj2) {
+        console.log(obj2);
       }
       function callFunc(obj1) {
         console.log(obj1);
