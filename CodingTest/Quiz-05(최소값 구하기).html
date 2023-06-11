@@ -5,20 +5,7 @@
   <body>
     <script>
       function solution(arr) {
-        // 방법 1: for문을 이용
-        let answer,
-          min = Number.MAX_SAFE_INTEGER; // min에 js에서 제공하는 최댓값 넣어주기
-        // min = arr[0];
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i] < answer) answer = arr[i];
-        }
-        return answer;
-      }
-      function solution(arr) {
-        // 방법 2 : 내장함수 사용
-        console.log(Math.min(...arr)); // 최솟값
-        console.log(Math.max(...arr)); // 최대값
-        // 배열을 오브젝트로 받음 ...-> 전개해서 arr[0], arr[1]...이런식으로 전개해줌
+        
       }
       let arr = [5, 7, 1, 3, 2, 9, 11];
       console.log(solution(arr));
