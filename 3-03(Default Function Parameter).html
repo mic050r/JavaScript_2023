@@ -4,11 +4,21 @@
 </head>
 <body>
   <script>
-    function say1(message){
-      console.log(message);
+    // function say1(message){
+    //   console.log(message);
+    // }
+    // say1("안녕하세요?");
+    // say1();
+
+    function say2(message){
+      if(message != undefined) {
+        console.log("message");
+      }else{
+        console.log("매개변수가 없습니다.");
+      }
     }
-    say1("안녕하세요?");
-    say1();
+    say2("안녕하세요?");
+    say2();
   </script>
 </body>
 </html>
