@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script>
+    hello1(); // 먼저 호출해도 상관 x
+    function hello1(){
+      console.log("Hello World")
+    }
+    
+
+    // function hello2(){
+    //   console.log("Hello World2")
+    // }
+
+    
+    hello2(); // 변수에 넣은 것은 먼저 호출하면 실행 x
+    var hello2 = function(){
+      console.log("Hello World2")
+    }
+  </script>
+</body>
+</html>
