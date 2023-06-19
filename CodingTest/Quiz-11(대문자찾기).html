@@ -6,7 +6,12 @@
     <script>
       function solution(str) {
         let answer = 0;
-        
+        // 방법 1) toUpperCaser() 함수를 이용
+        for(let i of str){
+          // console.log(i, t.toUpperCase());
+          if(i === i.toUpperCase()) answer ++;
+        }
+
         return answer;
       }
       let str = "KoreaTimeGood";
