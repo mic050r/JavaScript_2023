@@ -22,12 +22,17 @@
     // console.log(person);
 
     // object key값을 동적으로 할당
-    var type1 = "student";
+    // var type1 = "teacher"; // {teacher: '홍', score: 95}
+    var type1 = "student"; // {student: '홍', score: 95}
     var score = {
-      type1 : "홍",
+      [type1] : "홍",
       score : 95
     }
     console.log(score);
+
+    score.grade = 1;
+    console.log(score); // {student: '홍', score: 95, grade: 1}
+
   </script>
 </body>
 </html>
