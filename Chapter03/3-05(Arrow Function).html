@@ -38,8 +38,11 @@
     // console.log(str);
 
     // arrow function
-    var hello5 = fullName => "Hello5" + " " + fullName;
+    // 함수 호출시 매개변수를 전달 하는 경우
+    // var hello5 = (fullName) => "Hello5" + " " + fullName;
     
+    // 매개변수가 하나일 경우에는 () 생략 가능
+    var hello5 = (fullName) => "Hello5" + " " + fullName;
     console.log(hello5("홍길동"));
   </script>
 </body>
