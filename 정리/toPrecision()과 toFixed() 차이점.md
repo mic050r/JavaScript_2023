@@ -1,3 +1,5 @@
+# toPrecision()과 toFixed() 차이점
+
 `toPrecision()`과 `toFixed()`는 모두 숫자를 문자열로 변환하는 메서드입니다. <br>
 그러나 두 메서드는 사용하는 방식과 결과물에 차이가 있습니다.
 
