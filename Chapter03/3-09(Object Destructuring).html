@@ -14,11 +14,15 @@
         countgry : "Chosun"
       }
     }
-    var person = getPerson();
+    // var person = getPerson();
     // console.log(person);
-    console.log(person.firstname);
-    console.log(person.lastName);
+    // console.log(person.firstname);
+    // console.log(person.lastName);
     // ex) 반에 김씨들만 불러오면 되는데 반 전체를 불러와 김씨를 찾는 모습
+
+    var {firstname, lastName} = getPerson();
+    console.log(firstname);
+    console.log(lastName);
   </script>
 </body>
 </html>
