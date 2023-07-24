@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = [];
+        // console.log(str.indexOf("student"))
+        // answer = str.filter(function(v,i){
+        //   // console.log(v,i, str.indexOf(v))
+        //   // if(str.indexOf(v) === i ){
+        //   //   // answer.push(v)
+        //   //   return true;
+        //   // }
+        //   return str.indexOf(v) === i;
+        // })
+
+         answer = str.filter((v,i) => str.indexOf(v) === i);
+
+         return answer;      
+      }
+      let str = ["good", "time", "good", "time", "student"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
