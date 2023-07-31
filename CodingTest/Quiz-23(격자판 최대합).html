@@ -5,30 +5,55 @@
   <body>
     <script>
       function solution(arr) {
+        // 내가 푼 풀이
+        // let list = [];
+        // let sum1 = 0, sum2 = 0;
+        // for(let i = 0; i < arr.length; i++){
+        //   sum1 = 0; sum2 = 0;
+        //   for(let j = 0; j < arr.length; j++){
+        //     sum1 += arr[i][j];
+        //     sum2 += arr[j][i];
+        //   }
+        //   list.push(sum1)
+        //   list.push(sum2)
+        // }
+
+        // let sum3 = 0, sum4 = 0;
+        // let idx = 0, k = 4 ;
+        // while(idx < arr.length){
+        //   sum3 += arr[idx][idx];
+        //   sum4 += arr[k][idx];
+        //   idx++;
+        // }
+        // list.push(sum3);
+        // list.push(sum4);
+        
+        // return Math.max(...list);
+
+        // 선생님의 풀이
         let answer = Number.MIN_SAFE_INTEGER;
-        let list = [];
-        let sum1 = 0, sum2 = 0;
-        for(let i = 0; i < arr.length; i++){
+        let n = arr.length; // 5
+        let sum1 = 0; // 행의 합
+        let sum2 = 0; // 열의 합
+        for(let i = 0; i < n; i++){ // i = 0,1,2,3,4
           sum1 = 0; sum2 = 0;
-          for(let j = 0; j < arr.length; j++){
+          for(let j = 0; j < n; j++){ // i =1, j =0,1,2,3,4
+            // console.log(i,j)
             sum1 += arr[i][j];
             sum2 += arr[j][i];
           }
-          list.push(sum1)
-          list.push(sum2)
+          answer = Math.max(answer, sum1, sum2);
         }
-
-        let sum3 = 0, sum4 = 0;
-        let idx = 0, k = 4 ;
-        while(idx < arr.length){
-          sum3 += arr[idx][idx];
-          sum4 += arr[k][idx];
-          idx++;
-        }
-        list.push(sum3);
-        list.push(sum4);
         
-        return Math.max(...list);
+        // 대각선의 합 구하기
+        sum1 = sum2 = 0;
+        for(let i = 0; i < n; i++){
+          sum1 += arr[i][i];
+          sum2 += arr[i][n-i-1];
+        }
+        answer = Math.max(answer, sum1, sum2); // 대각선까지 포함한 최대값 출력
+
+        return answer;
       }
       let arr = [
         [10,13,10,12,15],
