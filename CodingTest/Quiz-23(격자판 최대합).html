@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = Number.MIN_SAFE_INTEGER;
+        let list = [];
+        let sum1 = 0, sum2 = 0;
+        for(let i = 0; i < arr.length; i++){
+          sum1 = 0; sum2 = 0;
+          for(let j = 0; j < arr.length; j++){
+            sum1 += arr[i][j];
+            sum2 += arr[j][i];
+          }
+          list.push(sum1)
+          list.push(sum2)
+        }
+
+        let sum3 = 0, sum4 = 0;
+        let idx = 0, k = 4 ;
+        while(idx < arr.length){
+          sum3 += arr[idx][idx];
+          sum4 += arr[k][idx];
+          idx++;
+        }
+        list.push(sum3);
+        list.push(sum4);
+        
+        return Math.max(...list);
+      }
+      let arr = [
+        [10,13,10,12,15],
+        [12,39,30,23,11],
+        [11,25,50,53,15],
+        [19,27,29,37,27],
+        [19,13,30,13,19]
+      ];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
