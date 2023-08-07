@@ -1,7 +1,15 @@
-function log(message) {
+// function log(message) {
+//   console.log(message);
+// }
+
+// function error(message) {
+//   console.error(message);
+// }
+
+export function log(message) {
   console.log(message);
 }
 
-function error(message) {
+export function error(message) {
   console.error(message);
 }
