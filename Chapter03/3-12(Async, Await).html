@@ -29,12 +29,17 @@
     async function getUser() {
       return (await axios.get(url)).data;
     }
-    var data = await getUser();
-    var total = 0; 
-    for(var item of data){
-      total += item.price;
+
+    async function calcuateSum(){
+      var data = await getUser();
+      var total = 0; 
+      for(var item of data.products){
+        total += item.price;
+      }
+      console.log(total)
     }
-    console.log(total)
+    calcuateSum();
+    
   </script>
 </body>
 </html>
