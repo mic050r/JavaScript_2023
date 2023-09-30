@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Error - try, catch, finally</title>
+  </head>
+  <body>
+    <script>
+      console.log("Log 메시지");
+
+      try {
+        console.log("Log Message");
+      } catch (err) {
+        console.log(err.name);
+        console.log(err.message);
+      }
+
+      // throw 사용하여 강제로 에러발생
+      var x = 65;
+      try {
+        if (x === " ") {
+          throw "empty";
+        }
+      } catch (err) {
+        console.log(`x is ${err}`);
+        var y = x + 95;
+        console.log(y);
+      } finally {
+        console.log("error 유무와 상관없이 무조건 실행됨");
+      }
+    </script>
+  </body>
+</html>
