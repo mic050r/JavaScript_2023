@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>정규표현식(Regular Expression)</title>
+  </head>
+  <body>
+    <script>
+      var patt = /World/gi; // World : 패턴, ig : modifier
+      var str_one = "Hello World!";
+      console.log(str_one.search("World")); // 대소문자 구분, 없으면 리턴값 -1
+      console.log(str_one.search(/World/)); // /world/i로 대체가능, i : "대소문자를 구분하지 않음" 의미
+
+      var str_two = "Hello WORLD! world";
+      console.log(str_two.replace("World", "Jeongmin"));
+      console.log(str_two.replace(/World/i, "Jeongmin")); // 앞에 있는 WORLD만 수정됨
+      console.log(str_two.replace(/World/gi, "Jeongmin")); // str_two에 있는 모든 WORLD, world 변경됨, g : global
+
+      // [a - e] : a부터 e까지의 문자 추출
+      var str_thr = "Your capacity to enjoy life";
+      var patt_one = /[hat]/g; // [안에 해당된 문자 추출]
+      var patt_two = /[a-e]/g; // [a - e] : a부터 e까지의 문자 추출
+      var result_one = str_thr.match(patt_one);
+      console.log(result_one);
+
+      // [0 - 9] : 0 ~ 9사이의 모든 숫자 추출
+      var str_four = "5165KJM0307kjm";
+      var patt_thr = /[0-9]/g;
+      var result_two = str_four.match(patt_thr);
+      console.log(result_two);
+
+      var str_five = "Kim Jeongmin, Lee Minjun, Ryu Hyungon, Park Seonghan";
+      var patt_four = /(Kim Jeongmin | Ryu Hyungon)/g;
+      var result_thr = str_five.match(patt_four);
+      console.log(result_thr);
+
+      // \d : 숫자 [0-9], digit
+      var str_six = "Is this all the payment I get for my efforts?";
+      var patt_five = /\d/g;
+      var result_four = str_six.match(patt_five);
+      console.log(result_four);
+
+      // \s : 공백
+      var str_seven = "The main thing is to be happy.";
+      var patt_six = /\s/g;
+      var result_five = str_seven.match(patt_six);
+      console.log(result_five);
+
+      // 단어 중간에 TH가 들어가는 단어를 포함해서 search
+      var str_eight = "IT'S IMPORTANT TO TRY AND MAKE SOMETHING OF YOUR LIFE.";
+      var patt_seven = /TH/g;
+      // var patt_seven = /\bTH/g; // TH로 시작하는 단어 찾음
+      var result_six = str_eight.search(patt_seven);
+      console.log(result_six);
+
+      // n+ : n이 최소한 1개 이상(one or more)
+      var str_nine = "amor velut stella lucens";
+      var patt_eight = /o+/g;
+      var result_eight = str_nine.match(patt_eight);
+      console.log(result_eight);
+
+      // 수행평가 나옴
+      // n* : n이 zero or more
+      var str_ten = "stella aurorae";
+      var patt_nine = /ro*/g;
+      var result_nine = str_ten.match(patt_nine);
+      console.log(result_nine);
+
+      // n? : n이 zero or one (없거나 있으면)
+      var str_eleven = "65, 51 0307 Kim Jeongmin";
+      var patt_ten = /50?/g;
+      var result_ten = str_eleven.match(patt_ten);
+      console.log(result_ten);
+
+      // https://www.w3schools.com
+      // javascript - JS RegExp
+
+      // 우편번호 검색
+      var patt_eleven = /\d{5}/;
+      var postalCode = "KJM65137";
+      console.log(patt_eleven.test(postalCode));
+
+      var patt_twelve = /^\d{5}$/; // ^: ^ 다음 문자로 시작
+      var postalCode_two = "KJM65137";
+      var postalCode_thr = "65137";
+      console.log(patt_twelve.test(postalCode_thr));
+
+      // 핸드폰 번호 유효성 체크
+      // 010-2004-0307
+      var patt_thirteen = /^(010)-\d{4}-\d{4}/;
+      var tel = "010-2004-0307";
+      console.log(patt_thirteen.test(tel));
+
+      // 이메일주소 : kimjeongmin@ssglanders.com
+      var patt_fourteen = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+      var email = "kimjeongmin@ssglanders.com";
+      console.log(patt_fourteen.test(email));
+    </script>
+  </body>
+</html>
