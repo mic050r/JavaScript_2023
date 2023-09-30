@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>HTML 이벤트 컨트롤</title>
+  </head>
+  <body>
+    focus: blur:
+    <br />
+    <input type="text" id="text1" onfocus="doFocus()" onblur="doBlur(this)" />
+    <br />
+    select :
+    <select id="select1" onchange="doChange()">
+      <option value="KOREA">KOREA</option>
+      <option value="JAPAN">JAPAN</option>
+      <option value="USA">USA</option>
+    </select>
+    <br />
+    KEYDOWM :
+    <br />
+    <input type="text" id="text2" onkeydown="doKeydown(event)" />
+    <input type="button" value="조회하기" onclick="doSearch()" />
+
+    <script>
+      function doFocus() {
+        // alert("매일매일 1px씩 성장하는 예비개발자");
+        console.log("doFocus() 호출");
+      }
+
+      function doBlur(obj) {
+        if (obj.value == "") {
+          alert("필수값입니다. 반드시 값을 입력해주세요");
+        }
+        console.log("obj");
+      }
+
+      function doChange() {
+        // console.log("doChange() 호출");
+        let selectValue = document.getElementById("select1").value;
+        console.log(selectValue);
+      }
+
+      function doKeydown() {
+        // console.log("키가 눌러졌습니다.");
+        // console.log(event);
+        if (event.keyCode == 13) {
+          doSearch();
+        }
+      }
+
+      function doSearch() {
+        console.log("조회를 시작합니다.");
+      }
+    </script>
+  </body>
+</html>
