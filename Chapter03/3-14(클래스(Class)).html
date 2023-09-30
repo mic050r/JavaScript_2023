@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>클래스 Class</title>
+  </head>
+  <body>
+    <script>
+      // 클래스 : 객체를 생성하기 위한 툴, 설계도
+      class Car {
+        constructor(modelName, modelYear, type, price) {
+          this.modelName = modelName;
+          this.modelYear = modelYear;
+          this.type = type;
+          this.price = price;
+        } // 생성자
+
+        getModelName() {
+          return this.modelName;
+        }
+
+        getModelYear() {
+          return this.modelYear;
+        }
+
+        getType() {
+          return this.type;
+        }
+
+        getPrice() {
+          return this.price;
+        }
+
+        setPrice(price) {
+          this.price = price;
+        }
+      } // Car
+
+      let car_one = new Car("아이오닉6", "2023", "E", 6382);
+      console.log(car_one.getModelName());
+      console.log(car_one.getModelYear());
+      console.log(car_one.getType());
+      console.log(car_one.getPrice());
+      car_one.setPrice(5000);
+      console.log(car_one.getPrice());
+      console.log("-------------------------");
+
+      let car_two = new Car("제네시스 GV80", "2023", "G", 7398);
+      console.log(car_two.getModelName());
+      console.log(car_two.getModelYear());
+      console.log(car_two.getType());
+      console.log(car_two.getPrice());
+      console.log("-------------------------");
+
+      class ElectronicCar extends Car {
+        constructor(modelName, modelYear, price, time) {
+          super(modelName, modelYear, "E", price);
+          this.time = time;
+        }
+
+        getTime() {
+          return this.time;
+        }
+
+        setTime(time) {
+          this.time = time;
+        }
+      }
+
+      let eleCar_one = new ElectronicCar("아이오닉6", "2023", 6382);
+      console.log(eleCar_one.getModelName());
+      console.log(eleCar_one.getModelYear());
+      console.log(eleCar_one.getType());
+      console.log(eleCar_one.getPrice());
+      console.log("-------------------------");
+
+      let eleCar_two = new ElectronicCar("테슬라", 2024, 6500, 65);
+      console.log(eleCar_two.getModelName());
+      console.log(eleCar_two.getModelYear());
+      console.log(eleCar_two.getType());
+      console.log(eleCar_two.getPrice());
+      console.log(eleCar_two.getTime());
+      eleCar_two.setTime(60);
+      console.log(eleCar_two.getTime());
+    </script>
+  </body>
+</html>
