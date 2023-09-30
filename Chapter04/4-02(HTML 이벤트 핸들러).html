@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    focus: blur:
+    <br />
+    <input type="text" id="text1" onfocus="doFocus()" onblur="doBlur()" />
+    <script>
+      function doFocus() {
+        console.log("doFocus() 호출")
+      }
+      function doBlur(obj) {
+        if(obj.value == ""){
+          alert("필수값입니다!")
+        }
+        console.log(obj.value)  
+      }
+    </script>
+  </body>
+</html>
