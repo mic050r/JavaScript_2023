@@ -11,23 +11,23 @@
         // let sco = 1;
         // for(let i of score){
         //   if(i === 1) {
-        //     answer += sco; 
+        //     answer += sco;
         //     sco++;
         //   }else if(i === 0){
         //     sco = 1;
         //   }
         // }
-        for(let i of score){
-          if(i === 1) {
+        for (let i of score) {
+          if (i === 1) {
             cnt++;
-            answer += cnt; 
-          }else if(i === 0){
+            answer += cnt;
+          } else if (i === 0) {
             cnt = 0;
           }
         }
         return answer;
       }
-      let score = [1,0,1,1,1,0,0,1,1,0]
+      let score = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
       console.log(solution(score));
     </script>
   </body>

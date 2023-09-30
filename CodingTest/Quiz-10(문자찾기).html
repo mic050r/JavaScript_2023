@@ -7,16 +7,16 @@
       function solution(s, t) {
         let answer = 0;
         // 방법 1 : for문을 이용
-        for(let i of s){
-          if(i === t) answer++;
+        for (let i of s) {
+          if (i === t) answer++;
         }
 
         // 방법 2 : 내장 함수 이용
         answer = s.split(t).length; // answer = 4
         console.log(s.split(t));
-        return answer -1;
+        return answer - 1;
       }
-      let str = "COMPUTERPROGRAMINGR"
+      let str = "COMPUTERPROGRAMINGR";
       console.log(solution(str, "R"));
     </script>
   </body>

@@ -9,7 +9,7 @@
 
         // 내가짠 코드
         // let len = str.length;
-        
+
         // if(len%2===0){ // 짝수라면
         //   answer = str.substr(len/2-1,2);
         // }else{
@@ -17,19 +17,20 @@
         // }
 
         // 방법 1 : substring 이용
-        let mid = Math.floor(str.length/2); // 출력값 : 2
+        let mid = Math.floor(str.length / 2); // 출력값 : 2
         // if(str.length%2 === 1) // 글자 수 홀수
         //   answer = str.substring(mid, mid+1);
         // else
         //   answer = str.substring(mid-1, mid+1);
 
         // 방법 2 : substr 이용
-        if(str.length%2 === 1){ // 홀수
-          answer = str.substr(mid,1);
-        }else{
-          answer = str.substr(mid-1, 2);
+        if (str.length % 2 === 1) {
+          // 홀수
+          answer = str.substr(mid, 1);
+        } else {
+          answer = str.substr(mid - 1, 2);
         }
-        
+
         return answer;
       }
       console.log(solution("study"));

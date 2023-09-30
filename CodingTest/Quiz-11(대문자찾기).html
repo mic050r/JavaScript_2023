@@ -7,18 +7,18 @@
       function solution(str) {
         let answer = 0;
         // 방법 1) toUpperCaser() 함수를 이용
-        for(let i of str){
+        for (let i of str) {
           // console.log(i, t.toUpperCase());
-          if(i === i.toUpperCase()) answer ++;
+          if (i === i.toUpperCase()) answer++;
         }
 
         // 방법 2 : 아스키코드를 이용하는 방법
-         for(let x of str){
+        for (let x of str) {
           // console.log(x);
           let num = x.charCodeAt(); // ASCII코드로 변환
           // console.log(num)
-          if(num >= 65 && num <= 90) answer++;
-         }
+          if (num >= 65 && num <= 90) answer++;
+        }
         return answer;
       }
       let str = "KoreaTimeGood";
