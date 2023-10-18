@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>HTML 스타일시트 컨트롤</title>
+    <style>
+      .border-lavender {
+        border: 2px solid lavender;
+      }
+
+      .border-lightskyblue {
+        border: 2px solid lightskyblue;
+      }
+
+      .border-default {
+        border: 2px solid lightpink;
+      }
+    </style>
+  </head>
+
+  <body>
+    Text :
+    <br />
+    <input type="text" id="text1" onblur="changeBorder()" />
+
+    <br />
+    <br />
+
+    Radio(이메일 수신) :
+    <input
+      type="radio"
+      name="radio_email_yn"
+      value="Y"
+      onclick="showEmail()"
+    />동의
+    <input
+      type="radio"
+      name="radio_email_yn"
+      value="N"
+      onclick="hideEmail()"
+    />거부
+
+    <div id="divEmail" style="display: none">
+      이메일 <input type="text" id="email" />
+    </div>
+
+    <br />
+    <br />
+
+    <select id="select1" onchange="doChange(this)">
+      <option value=""></option>
+      <option value="KOREA">KOREA</option>
+      <option value="JAPAN">JAPAN</option>
+      <option value="USA">USA</option>
+    </select>
+
+    <select id="select2" style="display: none">
+      <option value="">서울</option>
+      <option value="">인천</option>
+      <option value="">대전</option>
+      <option value="">부산</option>
+    </select>
+
+    <br />
+    <br />
+
+    <input type="button" value="저장" onclick="doSave()" />
+
+    <script>
+      function changeBorder() {
+        var txt1 = document.getElementById("text1");
+        // console.log(txt1.value);
+        if (txt1.value === "lavender") {
+          text1.className = "border-lavender";
+        } else if (txt1.value === "lightskyblue") {
+          text1.className = "border-lightskyblue";
+        } else {
+          text1.className = "border-default";
+        }
+      } // changeBorder()
+
+      function doSave() {
+        var txt1 = document.getElementById("text1");
+        if (text1.value === "") {
+          text1.className = "border-lavender";
+          return alert("필수값을 입력해주세요");
+        }
+      } // doSave()
+
+      function showEmail() {
+        document.getElementById("divEmail").style.display = "";
+      } // showEmail()
+
+      function hideEmail() {
+        document.getElementById("divEmail").style.display = "none";
+      } // hideEmail()
+
+      function doChange(obj) {
+        if (obj.value === "KOREA") {
+          document.getElementById("select2").style.display = "";
+        } else {
+          document.getElementById("select2").style.display = "none";
+        }
+      } // doChange(obj)
+    </script>
+  </body>
+</html>
