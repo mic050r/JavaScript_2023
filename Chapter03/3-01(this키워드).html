@@ -20,20 +20,20 @@
       function callFunc(obj1) {
         console.log(obj1);
       }
-      // var person = {
-      //   firstName: "길동",
-      //   lastName: "홍",
-      //   fullName: function () {
-      //     return this.firstName + " " + this.lastName; // 오브젝트내에서
-      //   },
-      // };
-      // console.log(person.fullName());
+      var person = {
+        firstName: "길동",
+        lastName: "홍",
+        fullName: function () {
+          return this.firstName + " " + this.lastName; // 오브젝트내에서
+        },
+      };
+      console.log(person.fullName());
 
-      // function myFunction() {
-      //   console.log(this);
-      // }
+      function myFunction() {
+        console.log(this);
+      }
 
-      // myFunction();
+      myFunction();
     </script>
   </body>
 </html>
